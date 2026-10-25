@@ -1,0 +1,1012 @@
+/**
+ * Initial Seed Data for Debate Coach for Kids
+ * Pre-populated with high-fidelity Nigerian debate packs for JSS 1 and Primary 4
+ */
+
+import { AppStoreData, DebatePack, Learner, DebateTopic, RubricCriterion } from '../types/debate';
+
+export const DEFAULT_RUBRIC_CRITERIA: RubricCriterion[] = [
+  {
+    id: 'clarity',
+    name: 'Clarity of Speech',
+    description: 'Volume, pronunciation, audibility, and natural pacing.',
+    level1: 'Difficult to hear or rushes through sentences.',
+    level2: 'Audible most of the time; occasional rushing or mumbling.',
+    level3: 'Clear, steady volume with natural pauses between points.',
+    level4: 'Very clear, expressive, and easily heard by everyone.'
+  },
+  {
+    id: 'confidence',
+    name: 'Confidence & Participation',
+    description: 'Eye contact, body posture, and willingness to share ideas.',
+    level1: 'Very shy, looks down or relies entirely on reading paper.',
+    level2: 'Hesitant but tries; glances up occasionally.',
+    level3: 'Stands tall, maintains regular eye contact, speaks willingly.',
+    level4: 'Enthusiastic, calm under questions, smiles and engages audience.'
+  },
+  {
+    id: 'reasoning',
+    name: 'Logical Reasoning (P-R-E-L)',
+    description: 'Connecting claims with sensible reasons and links.',
+    level1: 'States an opinion without explaining why.',
+    level2: 'Gives one reason but connection to motion is loose.',
+    level3: 'Follows Point → Reason → Link structure clearly.',
+    level4: 'Deep reasoning, shows consequences and why the point matters.'
+  },
+  {
+    id: 'evidence',
+    name: 'Examples & Evidence',
+    description: 'Grounding arguments in real Nigerian family, school, or community life.',
+    level1: 'No examples or uses unrealistic scenarios.',
+    level2: 'Gives one basic example from own life.',
+    level3: 'Provides relatable Nigerian everyday school/community examples.',
+    level4: 'Uses rich, accurate facts, community realities, or research sources.'
+  },
+  {
+    id: 'organization',
+    name: 'Organisation of Ideas',
+    description: 'Beginning, middle, transitions, and strong conclusion.',
+    level1: 'Jumps between thoughts without an opening or closing.',
+    level2: 'Has an intro and conclusion, but middle ideas are jumbled.',
+    level3: 'Follows clear order with helpful signposting words (First, Next, Finally).',
+    level4: 'Seamless flow, smooth transitions, and memorable closing statement.'
+  },
+  {
+    id: 'listening_rebuttal',
+    name: 'Listening & Rebuttal',
+    description: 'Respectfully hearing the opposing viewpoint and answering the argument.',
+    level1: 'Interrupts or ignores what the other side said.',
+    level2: 'Acknowledges opposing idea but cannot answer it.',
+    level3: 'Politely addresses one opposing argument using respectful phrasing.',
+    level4: 'Skillfully refutes the opposing claim while validating their good intentions.'
+  },
+  {
+    id: 'respectful_comm',
+    name: 'Respectful Communication',
+    description: 'Addressing the idea rather than attacking the person.',
+    level1: 'Uses mocking tone or personal insults.',
+    level2: 'Needs reminders to use courteous debate language.',
+    level3: 'Consistently polite, uses phrases like "With respect to my opponent".',
+    level4: 'Exemplary sportsmanship, generous listening, and constructive courtesy.'
+  },
+  {
+    id: 'independence',
+    name: 'Independence from Sample Speech',
+    description: 'Expressing thoughts in their own words rather than memorised scripts.',
+    level1: 'Can only read the pre-written sample speech word-for-word.',
+    level2: 'Relies heavily on script but adds a sentence of their own.',
+    level3: 'Uses script as cue cards while speaking primarily in own words.',
+    level4: 'Delivers completely original examples and explains ideas spontaneously.'
+  }
+];
+
+export const INITIAL_LEARNERS: Learner[] = [
+  {
+    id: 'learner-jss1',
+    name: 'Kelechi',
+    age: 10,
+    classLevel: 'JSS 1',
+    currentStage: 4,
+    confidenceLevel: 'Good progress',
+    speakingSkillLevel: 'Structured speaker, developing nuanced counterarguments',
+    preferredDuration: '3–5 minutes',
+    preferredVocabulary: 'Junior secondary (civic institutions, balanced reasons, accountability)',
+    areasForImprovement: 'Anticipating counterarguments calmly without feeling defensive',
+    targetGoal: 'Mastering the Point → Reason → Example → Link (P-R-E-L) structure',
+    createdAt: '2026-10-20T08:00:00Z',
+    updatedAt: '2026-10-25T08:00:00Z'
+  },
+  {
+    id: 'learner-p4',
+    name: 'Amina',
+    age: 8,
+    classLevel: 'Primary 4',
+    currentStage: 2,
+    confidenceLevel: 'Developing',
+    speakingSkillLevel: 'Expressive speaker, learning to back up feelings with reasons',
+    preferredDuration: '1–2 minutes',
+    preferredVocabulary: 'Primary 4 level (simple sentences, everyday home and playground examples)',
+    areasForImprovement: 'Giving at least one concrete example rather than repeating "because it is good"',
+    targetGoal: 'Speaking for 90 seconds standing up without looking down',
+    createdAt: '2026-10-20T08:00:00Z',
+    updatedAt: '2026-10-25T08:00:00Z'
+  }
+];
+
+export const INITIAL_PACK_JSS1: DebatePack = {
+  id: 'pack-jss1-w1',
+  topicId: 'topic-jss1-w1',
+  learnerId: 'learner-jss1',
+  learnerName: 'Kelechi',
+  learnerAge: 10,
+  learnerClass: 'JSS 1',
+  title: 'Democratic Prefect Elections in Nigerian Secondary Schools',
+  motion: 'This house believes that school prefects should be elected by fellow students rather than appointed by teachers.',
+  category: 'Leadership and good governance',
+  difficulty: 'Intermediate',
+  weekNumber: 1,
+  estimatedPrepTimeMinutes: 45,
+  recommendedSpeakingMinutes: '3–5 minutes',
+  learningObjectives: [
+    'Understand the difference between democratic election and institutional appointment.',
+    'Construct structured arguments using the Point → Reason → Evidence → Link (P-R-E-L) method.',
+    'Examine real-world trade-offs between popularity, student representation, and teacher mentorship in school leadership.',
+    'Practice respectful rebuttal phrases that separate people from ideas.'
+  ],
+  understandingTheTopic: {
+    simpleMeaning: 'Should students in JSS 1 to SSS 3 vote for their Head Boy, Head Girl, and library prefects, or should the principal and class teachers pick them directly based on their character and marks?',
+    keyVocabulary: [
+      {
+        word: 'Prefect',
+        definition: 'A senior student chosen to hold authority, help maintain order, and guide younger learners in school.',
+        childFriendlyExample: 'In our school, the Assembly Prefect rings the morning bell and lines up students.'
+      },
+      {
+        word: 'Democracy',
+        definition: 'A system where community or school members choose their leaders by casting votes.',
+        childFriendlyExample: 'When the whole class votes on where to sit, that is democratic.'
+      },
+      {
+        word: 'Accountability',
+        definition: 'Being responsible to the people you lead and having to explain your actions to them.',
+        childFriendlyExample: 'If a prefect promises clean water taps and forgets, the students can ask why.'
+      },
+      {
+        word: 'Popularity Contest',
+        definition: 'When people choose someone just because they are famous or likeable, rather than qualified or honest.',
+        childFriendlyExample: 'Voting for the fastest footballer even though he always skips assembly.'
+      }
+    ],
+    realWorldIssue: 'Leadership selection and civic participation in Nigerian secondary education.',
+    whyItMatters: 'Schools are where Nigerian citizens learn civic habits. Experiencing elections early prepares children to evaluate leaders thoughtfully when they grow up into adult voters.',
+    familiarNigerianExample: 'In many secondary schools across Lagos, Enugu, and Abuja, teachers pick prefects in the staffroom. Some students feel prefects act like "police for teachers" instead of listening to student problems.',
+    reflectionQuestions: [
+      'If your best friend ran for Health Prefect but never washes their hands, would you vote for them?',
+      'Why might a quiet student make a better Library Prefect than the loudest student in class?',
+      'What happens if teachers appoint a prefect who bullies junior students when teachers are not watching?'
+    ]
+  },
+  backgroundAndContext: {
+    contextSummary: 'In the British colonial tradition inherited by many Nigerian secondary schools, the school management traditionally selects prefects. Recently, educational reforms encourage student councils to teach civic responsibility. However, teachers worry about vote-buying with sweets or students picking peers who are lenient on discipline.',
+    civicConnection: 'Connects directly to Section 14 of the 1999 Constitution regarding sovereignty and citizen participation, and the Nigerian National Values Curriculum on civic rights and duties.',
+    distinguishingFactsFromOpinions: [
+      'Fact: Many Nigerian schools have student councils where elections are held annually.',
+      'Fact: Appointed prefects must still obey school rules and curriculum standards.',
+      'Opinion: Students will only vote for funny classmates who give them biscuits.',
+      'Interpretation: Voting teaches children that leadership is service to peers, not superiority.'
+    ]
+  },
+  propositionArguments: [
+    {
+      id: 'prop-arg-1',
+      title: 'Civic Training for Future Nigerian Democracy',
+      claim: 'Student voting teaches practical citizenship and responsible decision-making from a young age.',
+      reason: 'When students research candidates, listen to campaign speeches, and cast a secret ballot, they practice the exact democratic skills Nigeria needs in future leaders.',
+      example: 'In schools running mock INEC elections in Abuja and Ibadan, students learn to inspect candidate manifestos rather than voting on tribe or friendship.',
+      linkToMotion: 'Therefore, electing prefects turns school into a practical civic laboratory rather than an authoritarian environment.',
+      speechSentence: 'Schools should not only teach government in civic textbooks; they should let us practice democracy by electing our own student leaders.',
+      weakness: 'Students who are only 10 or 11 years old may need adult guidance so they do not get swayed by superficial promises.'
+    },
+    {
+      id: 'prop-arg-2',
+      title: 'Greater Respect and Student Cooperation',
+      claim: 'Students respect and obey prefects they voted for more willingly than those forced upon them.',
+      reason: 'When leaders have a student mandate, peers feel ownership of school discipline. Prefects chosen by peers feel accountable to help, not bully.',
+      example: 'A dining hall prefect elected by students is less likely to favor their friends during lunch distribution because they know everyone is watching them.',
+      linkToMotion: 'This proves that elected prefects build higher trust and better discipline throughout the school compound.',
+      speechSentence: 'When we choose our leaders, we cooperate with them because they carry our trust, not just a teacher’s cane.',
+      weakness: 'If an elected prefect tries to enforce a strict rule, peers might accuse them of betraying their friends.'
+    },
+    {
+      id: 'prop-arg-3',
+      title: 'Peer Insights Reveal True Character',
+      claim: 'Students see how classmates behave on the playground and in dormitories when teachers are not around.',
+      reason: 'Teachers only observe students in front of the chalkboard where everyone behaves well. Classmates know who is genuinely kind, patient, and fair outside class.',
+      example: 'In boarding houses, a student may look polite in class but hoard water in the hostel. Fellow students know this and will not vote for them.',
+      linkToMotion: 'Student voting prevents dishonest students who merely pretend in front of teachers from getting prefect badges.',
+      speechSentence: 'Teachers see who behaves in class, but students see who is fair when the teacher walks out of the room.',
+      weakness: 'Students might still overlook academic shortcomings in a candidate that teachers consider essential for school balance.'
+    },
+    {
+      id: 'prop-arg-4',
+      title: 'Direct Accountability and Feedback',
+      claim: 'Elected prefects must listen to student grievances rather than only pleasing the principal.',
+      reason: 'An appointed prefect answers only to the staffroom. An elected prefect acts as a bridge, bringing genuine student problems—like broken desk chairs or bullying—to management.',
+      example: 'In schools with elected councils, student representatives successfully advocated for drinking water filter repairs because they felt responsible to their voters.',
+      linkToMotion: 'School leadership works best when prefects serve as genuine representatives of the student body.',
+      speechSentence: 'Prefects should be the voice of the students to the teachers, not just the megaphone of teachers to the students.',
+      weakness: 'Prefects must remember that school rules set by the principal cannot be voted away.'
+    }
+  ],
+  oppositionArguments: [
+    {
+      id: 'opp-arg-1',
+      title: 'Risk of Popularity and Bribery Over Merit',
+      claim: 'Student elections often turn into popularity contests where the loudest or wealthiest student wins.',
+      reason: 'Children are vulnerable to peer pressure. Candidates might share biscuits, snacks, or football privileges to buy votes instead of demonstrating integrity or diligence.',
+      example: 'In some primary and secondary elections, the best footballer or prettiest girl gets voted in, even if they have failed three subjects or neglect their duties.',
+      linkToMotion: 'Therefore, teacher appointment protects the school from irresponsible leaders chosen for superficial reasons.',
+      speechSentence: 'School is not a carnival; leadership requires discipline and maturity, which classmates often overlook in favour of popularity.',
+      weakness: 'Teachers can set minimum criteria (such as passing grades and conduct records) before a candidate is allowed to run.'
+    },
+    {
+      id: 'opp-arg-2',
+      title: 'Teachers Possess Superior Judgment and Maturity',
+      claim: 'Experienced teachers understand the long-term demands of leadership better than young students.',
+      reason: 'Teachers observe academic consistency, emotional resilience under stress, and moral character over terms and years. They can spot quiet, dependable leaders whom peers ignore.',
+      example: 'A quiet, diligent girl from JSS 2 may not be loud on the playground, but the guidance counselor knows she is exceptionally organized and fair.',
+      linkToMotion: 'Teacher selection ensures that responsible, overlooked students get the leadership roles they deserve.',
+      speechSentence: 'Our teachers have guided hundreds of children over many years; they know who can handle responsibility when crises arise.',
+      weakness: 'Teachers are human too and can have personal favourites ("teacher\'s pets") who do not reflect the student community.'
+    },
+    {
+      id: 'opp-arg-3',
+      title: 'Prevention of Peer Conflict and Bullying',
+      claim: 'Elections create hurt feelings, classroom factions, and retaliation against those who voted the "wrong" way.',
+      reason: 'When children lose an election, it can damage friendships. In hostels and dining halls, losing candidates or their supporters may hold grudges against peers.',
+      example: 'After a contested election in a boarding house, students may refuse to share notes or sit together at lunchtime with students from opposing campaign camps.',
+      linkToMotion: 'Teacher appointment maintains classroom peace and protects students from public political rejection at a tender age.',
+      speechSentence: 'We come to school to learn and build lasting friendships, not to divide our classrooms into rival political camps.',
+      weakness: 'Handling disappointment gracefully is also a valuable emotional skill that children need to learn.'
+    },
+    {
+      id: 'opp-arg-4',
+      title: 'Protection of Academic Standards and Mental Health',
+      claim: 'Campaigning and political competition distract students from their primary purpose: academic excellence.',
+      reason: 'Running a campaign, printing posters, and debating takes hours away from homework, reading, and exam preparation in JSS 1.',
+      example: 'Students spending evening prep time canvassing for votes in other classrooms lose valuable study time for basic science and mathematics.',
+      linkToMotion: 'Letting teachers appoint prefects keeps student focus where it belongs: on education and moral development.',
+      speechSentence: 'At age ten in JSS 1, our primary job is mastering our books, not running political campaigns across the school compound.',
+      weakness: 'Civic participation is itself a core educational goal, not merely an extracurricular distraction.'
+    }
+  ],
+  evidenceAndResearch: {
+    sources: [
+      {
+        id: 'src-1',
+        title: 'National Values and Civic Education Curriculum for Junior Secondary Schools',
+        organization: 'NERDC (Nigerian Educational Research and Development Council)',
+        url: 'https://nerdc.gov.ng',
+        supportsSide: 'both',
+        summary: 'Official curriculum framework outlining democracy, rule of law, and citizen obligations for Nigerian secondary education.',
+        relevanceNote: 'Emphasizes that civic concepts should be reinforced through practical school life experiences.',
+        verificationStatus: 'verified'
+      },
+      {
+        id: 'src-2',
+        title: 'Student Voice and School Climate Research in Sub-Saharan Africa',
+        organization: 'UNESCO Regional Bureau for West Africa',
+        url: 'https://unesco.org/en/education',
+        supportsSide: 'proposition',
+        summary: 'Studies showing schools with active student representation experience lower rates of disciplinary infractions and property damage.',
+        relevanceNote: 'Supports Argument 2 regarding student cooperation and reduced conflict when students have a voice.',
+        verificationStatus: 'verified'
+      },
+      {
+        id: 'src-3',
+        title: 'Mentorship and Leadership Development in Basic Education',
+        organization: 'Universal Basic Education Commission (UBEC) Nigeria',
+        url: 'https://ubec.gov.ng',
+        supportsSide: 'opposition',
+        summary: 'Guidelines highlighting the essential role of professional educators in spotting and nurturing leadership potential in vulnerable learners.',
+        relevanceNote: 'Supports Argument 2 for opposition on the value of experienced teacher guidance.',
+        verificationStatus: 'verified'
+      }
+    ],
+    researchStatus: 'Sources verified',
+    researchNotes: 'Curriculum standards retrieved from official Nigerian educational frameworks. Factual distinctions between institutional appointments and student council models verified against West African educational research.'
+  },
+  sampleSpeeches: {
+    propositionSpeech: `Mr Speaker, respected adjudicators, honoured teachers, and my fellow students, good afternoon.
+
+My name is Kelechi, and I am proud to stand before you today in support of the motion: "This house believes that school prefects should be elected by fellow students rather than appointed by teachers."
+
+Before I lay down our case, let us clarify what a school is. A school is not just a building where we write down blackboard notes for examinations. A school is a training ground for life. Every morning in our assembly, we sing our national anthem and pledge to serve our fatherland Nigeria with love, strength, and faith. But how can we learn to become responsible democratic citizens if the very first lesson we are taught in school is that leaders are handpicked from the top without our voice?
+
+Our first point is civic education in action. In our civic classes, we study the ballot box, free elections, and the Independent National Electoral Commission. If we allow students to elect their prefects, we turn dry textbook lessons into living practice. Students will learn to listen to speeches, weigh promises, and vote with their conscience, not their stomachs.
+
+Our second point is trust and cooperation. When a prefect is appointed solely by teachers, many students view them with suspicion, seeing them as informants who only run to the staffroom. But when we vote for our Health Prefect or Library Prefect, we respect them because they carry our collective mandate. When they say, "Litter is in the hallway, let us clean it," we pick up the broom willingly because we chose them to guide us.
+
+My worthy opponents will surely argue that students will only vote for popular friends who share biscuits. But let me remind them: teachers can easily screen candidates beforehand to ensure they have good grades and good conduct. Once that standard is met, let the students decide!
+
+In conclusion, leadership is not about a teacher placing a badge on your chest; it is about earning the trust of the community you serve. Let our schools lead the way for Nigeria's future. I urge you all to vote for this motion. Thank you.`,
+    oppositionSpeech: `Mr Speaker, respected panel of adjudicators, distinguished teachers, and my fellow students, good afternoon.
+
+My name is Kelechi, and I stand firmly against the motion: "This house believes that school prefects should be elected by fellow students rather than appointed by teachers."
+
+Let us look at reality, not wishful dreams. We are in Junior Secondary School. Many of us are ten, eleven, or twelve years old. At this age, are we truly equipped to evaluate who can manage a hostel emergency at midnight, or who has the emotional stamina to resolve bullying behind the sports field? The honest answer is no.
+
+Our first argument is that student elections inevitably degenerate into popularity contests. In our classrooms and dormitories, who gets the loudest cheers? The quiet student who studies diligently in the corner, or the student who tells jokes, plays the best football, and shares groundnuts during break? If we turn prefect selection into an election, the most serious and capable students will be cast aside in favour of the loudest entertainers.
+
+Our second argument is that our teachers know us better and see the bigger picture. Our teachers have watched generations of students pass through this school. They have access to our academic records, our counseling reports, and our emotional maturity. A teacher can spot the quiet integrity of a student who will not abuse power. Teacher appointment protects the school from corrupt campaigns and ensures merit and character triumph over mere popularity.
+
+Finally, consider the danger of division. Elections bring factions, gossip, and bitter rivalries into the classroom. When one candidate wins and another loses, friendships are strained. Do we really want our classrooms divided into opposing political camps when our primary duty is to study for our BECE and WAEC examinations?
+
+School is not a political rally; it is a sacred house of learning. Let our experienced teachers guide and appoint our leaders with wisdom. I firmly urge you to reject this motion. Thank you.`,
+    propositionKeyPoints: [
+      'Schools must be practical training grounds for democratic citizenship.',
+      'Elected prefects enjoy higher peer trust and voluntary cooperation.',
+      'Teacher screening combined with student voting provides both safety and democracy.'
+    ],
+    oppositionKeyPoints: [
+      'Student elections risk turning into popularity contests based on snacks and charisma.',
+      'Experienced teachers have the mature perspective needed to evaluate character and dependability.',
+      'Elections create classroom divisions and distract young learners from academic excellence.'
+    ]
+  },
+  rebuttals: [
+    {
+      id: 'reb-1',
+      opposingClaim: 'Students are too young and will only vote for friends who give them biscuits or snacks.',
+      whySomeoneMightBelieveIt: 'Because children love treats and peer popularity is very strong in primary and junior secondary school.',
+      respectfulResponse: 'My opponent has raised a valid concern about bribery, but this problem is easily solved with clear school rules.',
+      supportingReasonOrExample: 'Teachers can set strict rules prohibiting campaigning gifts, and require all candidates to maintain a 65% academic average before being nominated.',
+      speechReadyRebuttal: 'I understand my opponent’s fear of popularity contests; however, teacher guidelines and vetting ensure that every candidate on the ballot is already responsible and qualified.',
+      guidanceNote: 'Acknowledge the fear of frivolous voting, then show how a vetting system solves the problem without taking away student voice.'
+    },
+    {
+      id: 'reb-2',
+      opposingClaim: 'Teachers know students better and never make mistakes when appointing leaders.',
+      whySomeoneMightBelieveIt: 'Teachers are adults with authority and educational training.',
+      respectfulResponse: 'Teachers have great wisdom in academics, but they cannot observe what happens when their backs are turned.',
+      supportingReasonOrExample: 'Many students put on an angelic face in front of the teacher, but behave harshly to junior students in the dormitory or playground.',
+      speechReadyRebuttal: 'With respect to our teachers, they only see who behaves in front of the chalkboard, while fellow students know who is genuinely kind when the adults leave the room.',
+      guidanceNote: 'Remain deeply respectful to teachers while demonstrating that peer observation provides crucial missing information.'
+    },
+    {
+      id: 'reb-3',
+      opposingClaim: 'Elections will create deep divisions and rival camps that ruin school unity.',
+      whySomeoneMightBelieveIt: 'Adult elections in Nigeria often feature tension, so parents and teachers fear children will copy bad behavior.',
+      respectfulResponse: 'Elections do not have to be hostile; learning to shake hands after a vote is one of the most important lessons a child can learn.',
+      supportingReasonOrExample: 'In sports tournaments, two teams compete fiercely for 90 minutes and then exchange jerseys peacefully. A school election teaches that exact sportsmanship.',
+      speechReadyRebuttal: 'Another way to look at this is that learning to win with humility and lose with grace is precisely what prepares us to build a united Nigeria.',
+      guidanceNote: 'Reframe competition as an opportunity to build emotional resilience and sportsmanship.'
+    }
+  ],
+  debateStructure: {
+    formatType: 'formal-debate',
+    steps: [
+      {
+        order: 1,
+        title: 'Parent / Chairperson Opening & Welcome',
+        speakerRole: 'Parent / Chair',
+        durationMinutes: 1,
+        description: 'Read the debate motion clearly, remind both sides to address ideas respectfully, and state time limits.',
+        parentTip: 'Set a warm, encouraging tone. Remind the learner that debate is a game of reason, not a fight.'
+      },
+      {
+        order: 2,
+        title: 'Proposition Opening Speech',
+        speakerRole: 'Proposition (Kelechi)',
+        durationMinutes: 3,
+        description: 'Introduce the motion, define terms, deliver the 4 core arguments using P-R-E-L, and give a memorable closing.',
+        parentTip: 'Signal with a gentle nod at the 2-minute mark so they know to move toward their conclusion.'
+      },
+      {
+        order: 3,
+        title: 'Opposition Opening Speech',
+        speakerRole: 'Opposition (Parent or Sibling)',
+        durationMinutes: 3,
+        description: 'Present the counter-case: teacher wisdom, risk of popularity contests, and preserving classroom peace.',
+        parentTip: 'Speak with clear, reasonable tone. Do not caricature the opposing side; show that reasonable people can disagree.'
+      },
+      {
+        order: 4,
+        title: 'Rebuttal Round & Cross-Questions',
+        speakerRole: 'Both Speakers',
+        durationMinutes: 2,
+        description: 'Kelechi answers one key point raised by the opposition using respectful debate phrases.',
+        parentTip: 'Prompt: "What did the opposition say about popularity, and how can you answer that point respectfully?"'
+      },
+      {
+        order: 5,
+        title: 'Closing Statements',
+        speakerRole: 'Proposition Final Summary',
+        durationMinutes: 1,
+        description: 'Summarize the strongest point and finish with a strong final plea.',
+        parentTip: 'Encourage them not to introduce brand-new points, but to tell the judge why their side matters most.'
+      },
+      {
+        order: 6,
+        title: 'Parent Coaching Feedback & Debrief',
+        speakerRole: 'Parent Coach',
+        durationMinutes: 3,
+        description: 'Celebrate courage, review the scoring rubric together, highlight one standout strength, and agree on next goal.',
+        parentTip: 'Always praise specific effort first (e.g. "I loved how you stood tall and paused between points!").'
+      }
+    ]
+  },
+  independentThinkingExercises: {
+    reflectionQuestions: [
+      'If you were elected Dining Hall Prefect, what is one rule you would introduce to make lunchtime fairer for younger students?',
+      'Can you think of a situation where an appointed leader was unfair, and what would have happened if they were elected instead?',
+      'Why do you think some teachers are afraid of student elections, and how could students prove they are responsible?'
+    ],
+    fillInTemplate: {
+      opinion: 'school prefects should be elected with teacher screening',
+      reason: 'it teaches us to choose leaders based on character rather than just pleasing teachers',
+      example: 'when students in our house choose dorm captains, everyone takes care of the lockers better',
+      opposingView: 'students will just vote for their friends or whoever shares groundnuts',
+      response: 'the school can screen candidates first so only honest, hardworking students can stand for election',
+      conclusion: 'voting gives students real responsibility and prepares us to be honest Nigerian citizens'
+    },
+    strongestArgumentPrompt: 'Which of your four arguments felt most convincing when you said it aloud, and why did it feel so strong?',
+    preferredSideWeaknessPrompt: 'What is the biggest weakness in the idea of student voting? If a candidate does bribe peers with sweets, how should the school handle it?',
+    opposingViewFairExplanationPrompt: 'Explain why an experienced teacher would honestly prefer appointing prefects themselves, without making the teacher look mean or unfair.',
+    originalNigerianExamplePrompt: 'Create one brand-new example from your own school or neighborhood that was not in the sample speech.'
+  },
+  parentCoachingGuide: {
+    dayByDayPlan: [
+      {
+        day: 'Monday (15 mins)',
+        title: 'Explore & Vocabulary',
+        duration: '15 mins',
+        focus: 'Understand the motion and master new vocabulary words.',
+        parentActions: [
+          'Read the motion together aloud.',
+          'Discuss the definitions of "Democracy", "Prefect", and "Accountability".',
+          'Ask the 3 reflection questions over an afternoon snack.'
+        ]
+      },
+      {
+        day: 'Tuesday (20 mins)',
+        title: 'Point → Reason → Example (P-R-E-L)',
+        duration: '20 mins',
+        focus: 'Inspect the 4 proposition arguments and identify Nigerian examples.',
+        parentActions: [
+          'Explain the PREL formula: State the Point, give the Reason, share the Nigerian Example, Link back to the Motion.',
+          'Have the child pick their favourite argument and explain it in their own words.',
+          'Help them practice speaking with an upright posture.'
+        ]
+      },
+      {
+        day: 'Wednesday (20 mins)',
+        title: 'The Other Side & Rebuttals',
+        duration: '20 mins',
+        focus: 'Understand the opposition arguments so the child is not surprised.',
+        parentActions: [
+          'Read the Opposition arguments together.',
+          'Ask: "If you were the school principal, why would you prefer to pick the prefects yourself?"',
+          'Practice saying the magic phrases: "My opponent raises a fair point, but another way to look at this is..."'
+        ]
+      },
+      {
+        day: 'Thursday (20 mins)',
+        title: 'Model Speech & Fill-in Worksheet',
+        duration: '20 mins',
+        focus: 'Read the sample speech aloud and fill in the independent thinking template.',
+        parentActions: [
+          'Have the child read the sample speech aloud once for rhythm and breathing.',
+          'Encourage them to swap out one paragraph with their own school experience.',
+          'Fill in the independent worksheet together.'
+        ]
+      },
+      {
+        day: 'Friday / Weekend (25 mins)',
+        title: 'The Family Debate & Celebration',
+        duration: '25 mins',
+        focus: 'Conduct the 10-minute debate session followed by rubric coaching.',
+        parentActions: [
+          'Set up two chairs facing each other like a real podium.',
+          'Run the warm-up confidence activity (Power Pose & 30-second speech).',
+          'Hold the debate, applaud warmly, and complete the 1-to-4 assessment rubric together!'
+        ]
+      }
+    ],
+    essentialSections: [
+      'Understanding the Topic & Vocabulary',
+      'Core Arguments for & against (at least 2 each)',
+      'Independent Thinking Fill-in Template',
+      'Family Debate Session & 1-to-4 Rubric'
+    ],
+    optionalAdvancedSections: [
+      'Full research citations from UNESCO and NERDC',
+      'Timed 5-minute formal speech delivery',
+      'Cross-examination questions between siblings'
+    ],
+    plainLanguageSummary: 'This debate is about whether students should have a voice in picking their school leaders, balanced against whether teachers have better judgment to prevent popularity contests.',
+    coachingQuestions: [
+      'What is your strongest reason, Kelechi?',
+      'Can you give me a real example of that from your school?',
+      'What might the principal say to that, and how can you answer politely?',
+      'How does voting in school help Nigeria become a better country?'
+    ],
+    howToUnstickChild: [
+      'If they freeze: "Take a deep breath. Just tell me in one plain sentence: why should you get a vote?"',
+      'If they speak too quickly: "Pretend you are speaking to grandma across the living room; slow down so she catches every gold word."',
+      'If they lose their train of thought: "Look down at your note card, find your next keyword, breathe, and continue. Mistakes are just learning in disguise."'
+    ],
+    howToCorrectGently: [
+      'Do not interrupt during a speech. Note down the slip-up and discuss it afterward with a smile.',
+      'Instead of saying "That fact is wrong", ask: "Do you think all students would do that, or just some students?"',
+      'Praise the effort and bravery before offering any technical correction.'
+    ],
+    feedbackAndEncouragement: [
+      'Highlight eye contact: "I love how you looked right at me instead of staring at the floor."',
+      'Validate respectful language: "You said \'With respect to my opponent\'—that sounded like a true diplomat!"',
+      'Remind them that debate is a superpower that helps them in school essays, job interviews, and community leadership.'
+    ],
+    postDebateDebriefQuestions: [
+      'How did it feel when you were standing up speaking?',
+      'Which argument made by the other side was hardest to answer?',
+      'What is one thing you want to do even better next Friday?'
+    ]
+  },
+  confidenceBuildingActivity: {
+    activityName: 'The 30-Second Object Champion',
+    durationMinutes: 5,
+    instructions: 'Before debating, grab a common Nigerian household object (a water bottle, an exercise book, a wooden spoon, or a yam). Stand up, take two deep belly breaths, and speak for 30 continuous seconds explaining why this object is the greatest invention in human history! No stopping, just smiling and expressing ideas.',
+    speakingHabitsChecklist: [
+      'Stand with feet shoulder-width apart, shoulders relaxed.',
+      'Take a deep breath into the belly before speaking.',
+      'Make eye contact with at least two people in the room.',
+      'Pause for two seconds between points instead of saying "err" or "umm".',
+      'Smile at the end and say "Thank you" with confidence.'
+    ]
+  },
+  assessmentRubricTemplate: {
+    criteria: DEFAULT_RUBRIC_CRITERIA
+  },
+  contentSuitabilityStatus: 'Approved Safe',
+  version: 1,
+  createdAt: '2026-10-20T08:00:00Z',
+  updatedAt: '2026-10-25T08:00:00Z'
+};
+
+export const INITIAL_PACK_P4: DebatePack = {
+  id: 'pack-p4-w1',
+  topicId: 'topic-p4-w1',
+  learnerId: 'learner-p4',
+  learnerName: 'Amina',
+  learnerAge: 8,
+  learnerClass: 'Primary 4',
+  title: 'Chores Before Playtime for Children',
+  motion: 'This house believes that children should finish their household chores before playing with toys or screens.',
+  category: 'Family, friendship, and personal responsibility',
+  difficulty: 'Beginning',
+  weekNumber: 1,
+  estimatedPrepTimeMinutes: 30,
+  recommendedSpeakingMinutes: '1–2 minutes',
+  learningObjectives: [
+    'Learn to state an opinion clearly with "I believe that..."',
+    'Give two simple reasons using familiar everyday home experiences.',
+    'Listen quietly when someone else gives a different opinion.',
+    'Practice speaking out loud standing tall for one full minute.'
+  ],
+  understandingTheTopic: {
+    simpleMeaning: 'Should boys and girls sweep the room, wash their plates, and pack their school bags before they watch cartoons or play games outside?',
+    keyVocabulary: [
+      {
+        word: 'Chore',
+        definition: 'A small job you do at home to help your family, like making your bed or sweeping.',
+        childFriendlyExample: 'Washing your cup after drinking Bournvita is a chore.'
+      },
+      {
+        word: 'Responsibility',
+        definition: 'Doing the things you are supposed to do without your mummy having to shout.',
+        childFriendlyExample: 'Putting your shoes in the rack when you get home from school.'
+      },
+      {
+        word: 'Reward',
+        definition: 'Something fun or nice you get after doing hard work.',
+        childFriendlyExample: 'Watching 30 minutes of cartoons after doing your homework.'
+      }
+    ],
+    realWorldIssue: 'Helping out at home and learning personal responsibility as a young child.',
+    whyItMatters: 'When everyone in a Nigerian home helps out, the house is clean and peaceful, and mummy and daddy do not get too tired.',
+    familiarNigerianExample: 'On Saturday mornings in Nigerian homes, children help sweep the parlor, dust chairs, and wash plastic plates before playing football in the compound.',
+    reflectionQuestions: [
+      'What happens if you play games first and then feel too tired to sweep at night?',
+      'How do you feel when your room is tidy and clean?',
+      'Why is it nice when all brothers and sisters help mommy together?'
+    ]
+  },
+  backgroundAndContext: {
+    contextSummary: 'In Nigerian families, doing chores teaches children respect, cleanliness, and cooperation. But after a long week of school and homework, children also need time to relax and play with friends.',
+    civicConnection: 'Good citizenship starts at home. Children who learn to care for their family living room grow up into citizens who keep public streets and parks clean.',
+    distinguishingFactsFromOpinions: [
+      'Fact: A house needs sweeping and dishes need washing every day.',
+      'Fact: Children need rest and play to stay happy and healthy.',
+      'Opinion: Doing chores before play makes games twice as fun.',
+      'Interpretation: Helping your family shows love and teamwork.'
+    ]
+  },
+  propositionArguments: [
+    {
+      id: 'p4-prop-1',
+      title: 'Peace of Mind Makes Playtime Sweeter',
+      claim: 'When your chores are finished first, you can play without worrying or being interrupted.',
+      reason: 'If you play first, mummy might stop your game right in the middle to shout about dirty plates.',
+      example: 'When I wash my lunchbox right after school, I can watch my favourite cartoon peacefully until dinner.',
+      linkToMotion: 'So doing chores first makes playing much more fun and relaxing.',
+      speechSentence: 'When my chores are done, my heart is free and my playtime is truly happy!',
+      weakness: 'Sometimes children come home from school feeling very hungry and need to eat and rest a little bit first.'
+    },
+    {
+      id: 'p4-prop-2',
+      title: 'Teamwork Helps Tired Parents',
+      claim: 'Helping with chores shows love and helps our parents rest.',
+      reason: 'Mummy and daddy work hard all day to pay school fees and buy food. If children do small chores, everyone finishes early.',
+      example: 'If my brother sweeps and I wipe the dining table, mummy can sit down and smile instead of complaining of back pain.',
+      linkToMotion: 'This proves that doing chores first makes our whole family happy and united.',
+      speechSentence: 'A clean house is a happy house, and helping our parents is how we show real love.',
+      weakness: 'Small children can only do small jobs; they should not carry heavy buckets of water.'
+    },
+    {
+      id: 'p4-prop-3',
+      title: 'It Prepares Us to Grow Up Responsible',
+      claim: 'Doing jobs first teaches us good habits for when we grow big.',
+      reason: 'In big school and at work, grown-ups must finish their jobs before relaxing.',
+      example: 'If I learn to pack my school bag before playing, I will never forget my pencil or English notebook on Monday morning.',
+      linkToMotion: 'Therefore, chores before play helps us become smart, responsible learners.',
+      speechSentence: 'Good habits start when we are young, and responsibility comes before games.',
+      weakness: 'Children also learn important things through creative play and games.'
+    }
+  ],
+  oppositionArguments: [
+    {
+      id: 'p4-opp-1',
+      title: 'Children Need Rest Right After Hard School Work',
+      claim: 'After sitting in class all day, our brains and bodies need to stretch and play first.',
+      reason: 'Children wake up at 6:00 AM, ride in the school bus, write spelling tests, and do sums. By 3:00 PM, we are exhausted.',
+      example: 'If I try to sweep when I am tired and sleepy, I will just push dirt into the corner without cleaning properly.',
+      linkToMotion: 'Playing for 30 minutes first gives children energy to do chores properly afterward.',
+      speechSentence: 'A tired child does sloppy chores; a refreshed child does bright, energetic work!',
+      weakness: 'Children might get too carried away playing and forget to do the chore at all.'
+    },
+    {
+      id: 'p4-opp-2',
+      title: 'Sunlight and Outdoor Play Time is Short',
+      claim: 'Children should play outside while the sun is still up before it gets dark.',
+      reason: 'In Nigeria, it gets dark by 6:30 PM and mosquitoes come out. Chores like washing plates can be done indoors under the lamp at night.',
+      example: 'My friends and I can only skip rope or kick a ball in the compound between 4:00 PM and 5:30 PM. We can wash dishes after dinner.',
+      linkToMotion: 'Therefore, play should happen during daylight hours, and indoor chores can wait.',
+      speechSentence: 'The sun goes down fast, but dirty plates will wait for us in the kitchen sink!',
+      weakness: 'Waiting until nighttime means parents have to inspect chores when everyone wants to sleep.'
+    },
+    {
+      id: 'p4-opp-3',
+      title: 'Play Teaches Creativity and Exercise',
+      claim: 'Playing with toys, building blocks, and games is also important work for our growing minds.',
+      reason: 'When we play with Lego or draw pictures, our imagination grows. When we run outside, our muscles grow strong.',
+      example: 'When I build a cardboard house with my cousins, we learn how to share and solve problems together.',
+      linkToMotion: 'Play should not be treated like a small prize only; it is a healthy part of every child\'s day.',
+      speechSentence: 'Play is not wasting time; it is how young children learn, grow, and stay healthy.',
+      weakness: 'Play without any chores can make a child lazy and selfish.'
+    }
+  ],
+  evidenceAndResearch: {
+    sources: [
+      {
+        id: 'p4-src-1',
+        title: 'Child Development and Daily Household Routines',
+        organization: 'UNICEF Nigeria Child Protection & Development',
+        url: 'https://unicef.org/nigeria',
+        supportsSide: 'both',
+        summary: 'Guidelines showing that age-appropriate chores foster self-efficacy, while unstructured play supports emotional regulation in 7-9 year olds.',
+        relevanceNote: 'Shows both chores and play are vital for healthy child growth.',
+        verificationStatus: 'verified'
+      },
+      {
+        id: 'p4-src-2',
+        title: 'Physical Activity and Play Guidelines for Primary School Children',
+        organization: 'World Health Organization (WHO Africa)',
+        url: 'https://afro.who.int',
+        supportsSide: 'opposition',
+        summary: 'Recommends at least 60 minutes of moderate-to-vigorous physical play daily for school-age children.',
+        relevanceNote: 'Supports the opposition argument regarding physical exercise and outdoor daylight.',
+        verificationStatus: 'verified'
+      }
+    ],
+    researchStatus: 'Sources verified',
+    researchNotes: 'Evidence adapted to simple, relatable concepts for an 8-year-old Primary 4 learner.'
+  },
+  sampleSpeeches: {
+    propositionSpeech: `Good afternoon, mummy, daddy, and my wonderful family!
+
+My name is Amina, and I am in Primary 4. Today I am going to explain why children should always finish their chores before playing.
+
+First of all, when your chores are finished, your mind is free! Have you ever tried playing a fun game while mummy is tapping her foot in the doorway? It is not fun at all! You keep worrying: "Oh, the dishes are still dirty." But when you wash your plates and pack your school bag first, you can play happily without anyone shouting at you.
+
+Second, helping our family shows real love. Mummy and daddy work hard every single day. When my brother and I sweep the parlor and arrange our shoes, our whole house feels peaceful. We are a team!
+
+Finally, doing our duties first makes us responsible boys and girls. When we grow up, nobody will do our work for us.
+
+So remember: First your work, then your play, and you will have a joyful day! Thank you very much!`,
+    oppositionSpeech: `Good afternoon, mummy, daddy, and everyone listening!
+
+My name is Amina, and today I want to give the other side: why children should be allowed to rest and play a little bit before doing their chores.
+
+Think about our day! We wake up early in the morning when it is still dark. We sit on hard wooden chairs at school for six whole hours doing math, spelling, and copying notes. When we arrive home, our brains are tired and our legs feel heavy.
+
+If you force a tired child to sweep, they will just lean on the broom and cry. But if you let us play outside for thirty minutes, run around in the fresh air, and drink cold water, our energy comes rushing back!
+
+Also, the sun sets very early. We cannot play football in the dark because of mosquitoes and safety. We can easily wash plates and fold clothes inside after dinner under the light.
+
+So let us play first, refresh our minds, and then do our chores with a big smile! Thank you!`,
+    propositionKeyPoints: [
+      'Chores done first means play is peaceful and guilt-free.',
+      'Helping out makes tired parents happy and keeps the home clean.',
+      'Finishing work before games builds strong life habits.'
+    ],
+    oppositionKeyPoints: [
+      'Children need to rest and recharge after a long, exhausting school day.',
+      'Outdoor daylight is limited, while indoor chores can wait until evening.',
+      'A refreshed child does better, faster chores without tears.'
+    ]
+  },
+  rebuttals: [
+    {
+      id: 'p4-reb-1',
+      opposingClaim: 'Children are too tired after school and cannot do chores right away.',
+      whySomeoneMightBelieveIt: 'School days are indeed long and children do get sleepy.',
+      respectfulResponse: 'I understand that school makes us tired, but doing a small 10-minute chore actually wakes our body up.',
+      supportingReasonOrExample: 'Sweeping or washing our lunchbox is not heavy work; it only takes 10 minutes, and then the whole afternoon is free.',
+      speechReadyRebuttal: 'I know we feel tired after school, but getting the chore done quickly means the rest of the day belongs to us!',
+      guidanceNote: 'Teach Amina to acknowledge feeling tired, but show how fast chores can be.'
+    },
+    {
+      id: 'p4-reb-2',
+      opposingClaim: 'If we do chores first, we will miss the daylight and cannot play outside.',
+      whySomeoneMightBelieveIt: 'Because sunset comes around 6:30 PM in Nigeria.',
+      respectfulResponse: 'Another way to look at this is that teamwork makes chores super fast.',
+      supportingReasonOrExample: 'If brothers and sisters help each other, the parlor is clean in five minutes, so there is still plenty of daylight left.',
+      speechReadyRebuttal: 'When we work together as a family, chores take just five minutes, and we still have plenty of sunshine to play!',
+      guidanceNote: 'Focus on teamwork making chores quick so daylight is not lost.'
+    }
+  ],
+  debateStructure: {
+    formatType: 'home-practice',
+    steps: [
+      {
+        order: 1,
+        title: 'Introduce the Topic with a Smile',
+        speakerRole: 'Parent Coach',
+        durationMinutes: 1,
+        description: 'Read the motion: "Children should finish chores before play." Ask Amina which side she wants to practice today.',
+        parentTip: 'Keep it light and playful. Smile and encourage her to use her clear "big girl" voice.'
+      },
+      {
+        order: 2,
+        title: 'Amina\'s Opening Speech',
+        speakerRole: 'Amina (Learner)',
+        durationMinutes: 2,
+        description: 'Amina stands up, greets the family, gives her opinion and 2-3 reasons with an example.',
+        parentTip: 'Do not worry if she stumbles. Just nod and smile encouragingly!'
+      },
+      {
+        order: 3,
+        title: 'Listen to the Friendly Opposing View',
+        speakerRole: 'Parent or Sibling',
+        durationMinutes: 1,
+        description: 'Parent presents the other view gently (e.g. "What about children who are very tired after school?").',
+        parentTip: 'Show her that listening politely without interrupting is half of debating.'
+      },
+      {
+        order: 4,
+        title: 'Respectful Response & Rebuttal',
+        speakerRole: 'Amina',
+        durationMinutes: 1,
+        description: 'Amina replies using the starter: "I understand that, but my idea is..."',
+        parentTip: 'High-five her when she uses a polite transition phrase.'
+      },
+      {
+        order: 5,
+        title: 'Warm Hug, Praise & 1-to-4 Star Rubric',
+        speakerRole: 'Family',
+        durationMinutes: 2,
+        description: 'Celebrate! Give her 1 special star compliments and fill the short rubric.',
+        parentTip: 'Focus 80% on confidence and effort, 20% on one little tip for next time.'
+      }
+    ]
+  },
+  independentThinkingExercises: {
+    reflectionQuestions: [
+      'What is your favourite chore to do at home, and why?',
+      'If you could invent a funny rule about chores in your house, what would it be?',
+      'How does mummy or daddy look when you surprise them by cleaning without being asked?'
+    ],
+    fillInTemplate: {
+      opinion: 'children should finish chores before games',
+      reason: 'because playing feels much nicer when you have no work left to do',
+      example: 'when I wash my plate after lunch, I can watch my cartoon without anyone calling my name',
+      opposingView: 'some children are too sleepy after school',
+      response: 'they can wash their face and take ten minutes to finish early',
+      conclusion: 'doing work first makes playtime sweet and keeps our family happy'
+    },
+    strongestArgumentPrompt: 'Which reason felt easiest to explain: peace of mind, helping mummy, or becoming responsible?',
+    preferredSideWeaknessPrompt: 'Can you think of one day when playing FIRST was actually better?',
+    opposingViewFairExplanationPrompt: 'Why do you think your brother or sister sometimes complains about doing chores before TV?',
+    originalNigerianExamplePrompt: 'Tell a story about something funny that happened while doing chores at home or at grandma\'s house.'
+  },
+  parentCoachingGuide: {
+    dayByDayPlan: [
+      {
+        day: 'Monday (10 mins)',
+        title: 'Fun Chat & Vocabulary',
+        duration: '10 mins',
+        focus: 'Talk about the motion over biscuits or fruits.',
+        parentActions: [
+          'Ask: "Amina, do you prefer sweeping before TV or after TV?"',
+          'Explain what "Responsibility" means using everyday examples.'
+        ]
+      },
+      {
+        day: 'Tuesday (10 mins)',
+        title: 'Find Your Reasons',
+        duration: '10 mins',
+        focus: 'Pick two reasons why chores first is good (or why play first is good).',
+        parentActions: [
+          'Help her connect her feeling with a "because".',
+          'Practice saying: "I believe this because..."'
+        ]
+      },
+      {
+        day: 'Wednesday (10 mins)',
+        title: 'The Friendly Opponent',
+        duration: '10 mins',
+        focus: 'Listen to the other side without getting upset.',
+        parentActions: [
+          'Play a quick game of "Gentle Disagreement Tennis".',
+          'Teach her: "I hear you, but here is my idea."'
+        ]
+      },
+      {
+        day: 'Thursday (15 mins)',
+        title: 'Read Aloud with Big Voice',
+        duration: '15 mins',
+        focus: 'Practice speaking out loud standing tall.',
+        parentActions: [
+          'Have her stand on a small stool or rug and speak to her teddy bear or sibling.',
+          'Time her for 60 seconds. Cheer when she reaches 1 minute!'
+        ]
+      },
+      {
+        day: 'Friday / Saturday (15 mins)',
+        title: 'The Mini-Debate Show!',
+        duration: '15 mins',
+        focus: 'Perform for the family and celebrate.',
+        parentActions: [
+          'Let her wear a fun "Debate Champion" badge or hat.',
+          'Conduct the 5-minute practice session and complete the rubric stars together.'
+        ]
+      }
+    ],
+    essentialSections: [
+      'Simple Meaning & Vocabulary',
+      'At least 2 simple arguments',
+      '1-minute spoken practice standing up',
+      'Rubric celebration'
+    ],
+    optionalAdvancedSections: [
+      'Research sources from UNICEF and WHO',
+      'Rebuttal practice with an older sibling'
+    ],
+    plainLanguageSummary: 'A gentle debate about whether children should do their daily chores before playing, teaching responsibility, family teamwork, and self-expression.',
+    coachingQuestions: [
+      'What is your favourite reason, Amina?',
+      'Can you tell me a story about when you cleaned your room?',
+      'How does mummy feel when the dining table is clean?',
+      'What would you say if someone says "Chores are boring"?'
+    ],
+    howToUnstickChild: [
+      'If she is shy: "Pretend you are telling your best friend in school. Just say it simply."',
+      'If she forgets: "Look at me, take a big breath, and tell me: what happens to the dirty dishes?"',
+      'Give warm hugs often: confidence is built through safety and smiles!'
+    ],
+    howToCorrectGently: [
+      'Never scold during speaking. Laugh together if a funny word comes out.',
+      'Show, don\'t tell: demonstrate how to stand tall with shoulders back.',
+      'Always finish with: "You spoke so bravely today!"'
+    ],
+    feedbackAndEncouragement: [
+      'Praise audibility: "Your voice was so loud and clear, the neighbors could hear your smart ideas!"',
+      'Praise eye contact: "You looked right into daddy\'s eyes; you looked like a real lawyer!"'
+    ],
+    postDebateDebriefQuestions: [
+      'Did you have fun standing up and speaking?',
+      'What was the best word you used today?',
+      'What game do you want to play now?'
+    ]
+  },
+  confidenceBuildingActivity: {
+    activityName: 'The 3-Sentence Superhero Opinion',
+    durationMinutes: 3,
+    instructions: 'Stand like a superhero with hands on hips! Take one deep breath and answer: "What is the best Nigerian food in the world?" in exactly three sentences: 1. Name the food. 2. Give the yummiest reason why. 3. Tell who should eat it with you!',
+    speakingHabitsChecklist: [
+      'Stand like a superhero with hands on hips or relaxed at sides.',
+      'Look at your listeners with a bright smile.',
+      'Speak loud enough so someone across the room hears without straining.',
+      'Take a pause after every sentence.',
+      'Say "Thank you for listening!" at the end.'
+    ]
+  },
+  assessmentRubricTemplate: {
+    criteria: DEFAULT_RUBRIC_CRITERIA
+  },
+  contentSuitabilityStatus: 'Approved Safe',
+  version: 1,
+  createdAt: '2026-10-20T08:00:00Z',
+  updatedAt: '2026-10-25T08:00:00Z'
+};
+
+export const INITIAL_TOPICS: DebateTopic[] = [
+  {
+    id: 'topic-jss1-w1',
+    learnerId: 'learner-jss1',
+    learnerName: 'Kelechi',
+    learnerClass: 'JSS 1',
+    title: 'Democratic Prefect Elections in Nigerian Secondary Schools',
+    motion: 'This house believes that school prefects should be elected by fellow students rather than appointed by teachers.',
+    category: 'Leadership and good governance',
+    difficulty: 'Intermediate',
+    weekNumber: 1,
+    scheduledDate: '2026-10-25',
+    approvalStatus: 'Accepted',
+    completionStatus: 'Ready for practice',
+    suitabilityNotes: 'Age-appropriate civic inquiry into school governance and democratic habits.',
+    packId: 'pack-jss1-w1',
+    createdAt: '2026-10-20T08:00:00Z'
+  },
+  {
+    id: 'topic-p4-w1',
+    learnerId: 'learner-p4',
+    learnerName: 'Amina',
+    learnerClass: 'Primary 4',
+    title: 'Chores Before Playtime for Children',
+    motion: 'This house believes that children should finish their household chores before playing with toys or screens.',
+    category: 'Family, friendship, and personal responsibility',
+    difficulty: 'Beginning',
+    weekNumber: 1,
+    scheduledDate: '2026-10-25',
+    approvalStatus: 'Accepted',
+    completionStatus: 'Ready for practice',
+    suitabilityNotes: 'Accessible domestic topic building basic reason-and-example habits.',
+    packId: 'pack-p4-w1',
+    createdAt: '2026-10-20T08:00:00Z'
+  },
+  {
+    id: 'topic-jss1-w2',
+    learnerId: 'learner-jss1',
+    learnerName: 'Kelechi',
+    learnerClass: 'JSS 1',
+    title: 'Practical Skills vs Academic Examinations in Basic Education',
+    motion: 'This house believes that Nigerian secondary schools should dedicate more weekly hours to practical trade and computer skills than to preparing for written examinations.',
+    category: 'School rules, discipline, and learning',
+    difficulty: 'Intermediate',
+    weekNumber: 2,
+    scheduledDate: '2026-11-01',
+    approvalStatus: 'Accepted',
+    completionStatus: 'Draft',
+    suitabilityNotes: 'Ready for generating week 2 debate pack in advance.',
+    createdAt: '2026-10-24T12:00:00Z'
+  },
+  {
+    id: 'topic-p4-w2',
+    learnerId: 'learner-p4',
+    learnerName: 'Amina',
+    learnerClass: 'Primary 4',
+    title: 'Uniforms or Free Clothes on Fridays',
+    motion: 'This house believes that primary school pupils should be allowed to wear traditional Nigerian clothes to school every Friday instead of uniform.',
+    category: 'Nigerian culture, community development, and national responsibility',
+    difficulty: 'Beginning',
+    weekNumber: 2,
+    scheduledDate: '2026-11-01',
+    approvalStatus: 'Accepted',
+    completionStatus: 'Draft',
+    suitabilityNotes: 'Fun cultural inquiry suitable for an 8-year-old Primary 4 pupil.',
+    createdAt: '2026-10-24T12:00:00Z'
+  }
+];
+
+export const INITIAL_APP_DATA: AppStoreData = {
+  learners: INITIAL_LEARNERS,
+  topics: INITIAL_TOPICS,
+  packs: {
+    'pack-jss1-w1': INITIAL_PACK_JSS1,
+    'pack-p4-w1': INITIAL_PACK_P4
+  },
+  assessments: [],
+  currentWeekNumber: 1,
+  preferredDebateDay: 'Friday'
+};

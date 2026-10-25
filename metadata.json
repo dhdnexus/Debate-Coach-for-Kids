@@ -1,0 +1,6 @@
+{
+  "name": "Debate Coach for Kids",
+  "description": "Weekly AI debate coach and curriculum generator for children, featuring age-differentiated Nigerian civic topics, complete preparation packs, parent coaching guides, and assessment rubrics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

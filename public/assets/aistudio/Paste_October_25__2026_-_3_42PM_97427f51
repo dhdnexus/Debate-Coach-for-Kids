@@ -1,0 +1,912 @@
+# MASTER BUILD PROMPT: WEEKLY DEBATE COACH FOR CHILDREN
+## Google AI Studio + Gemini | Nigeria-focused | Parent-managed learning app
+
+## 1. YOUR ROLE
+
+Act as a senior full-stack application developer, AI product architect, educational curriculum designer, child-development-aware learning designer, and quality-assurance engineer.
+
+Build a complete, functional, polished, AI-powered web application called **Debate Coach for Kids**.
+
+Do not merely describe the application, produce a mockup, or give me a development plan. Implement the application in the available Google AI Studio app-building environment, run the available checks, identify defects, and fix them.
+
+Use Gemini as the AI reasoning and content-generation engine.
+
+Make sensible engineering decisions independently. Ask me a question only if a genuinely essential decision cannot be resolved safely and reasonably. Do not stop to ask about minor design choices.
+
+## 2. PROJECT PURPOSE
+
+I am a parent who wants to develop my children's:
+
+- Public-speaking ability and confidence.
+- Critical thinking and logical reasoning.
+- Understanding of society, governance, citizenship, leadership, and moral responsibility.
+- Ability to construct arguments and defend positions respectfully.
+- Listening, comprehension, and rebuttal skills.
+- Research, evidence evaluation, and vocabulary.
+- Ability to communicate clearly without relying on memorised speeches.
+
+The application must generate one new, age-appropriate debate topic per week for each child and produce a comprehensive preparation pack that I can use to coach them at home.
+
+This is a practical educational application, not a generic chatbot.
+
+## 3. TARGET LEARNERS
+
+Create two separate learner profiles.
+
+### Learner A: JSS 1
+
+- Age: 10 years.
+- Educational level: Junior Secondary School 1.
+- Primary objective: Develop structured reasoning, persuasive communication, critical thinking, and the ability to anticipate and respond to opposing arguments.
+- Expected material: More developed arguments, examples from Nigerian society, evidence-based reasoning, counterarguments, rebuttals, and structured speeches.
+- Suggested speaking duration: Approximately 3–5 minutes for an opening speech, adjustable to the child's progress.
+
+### Learner B: Primary 4
+
+- Age: 8 years.
+- Educational level: Primary 4.
+- Primary objective: Build confidence, vocabulary, clear expression, listening skills, and the ability to explain an opinion with simple reasons.
+- Expected material: Familiar situations, concrete examples, simple vocabulary, short sentences, relatable Nigerian settings, and guided argument-building exercises.
+- Suggested speaking duration: Approximately 1–2 minutes for an opening speech, adjustable to the child's progress.
+
+These durations are starting recommendations, not rigid rules.
+
+The system must differentiate content by both age and educational level. Do not merely shorten the older child's material to produce the younger child's material.
+
+Use the learner's profile to control reading difficulty, sentence length, vocabulary, conceptual complexity, argument depth, speech length, and coaching expectations.
+
+## 4. CORE PRODUCT REQUIREMENTS
+
+Build the following functional modules.
+
+### Module A: Parent dashboard
+
+Create a dashboard with:
+
+1. An overview of both learners.
+2. A separate weekly debate card for each child.
+3. The current week and generation date.
+4. Topic title, debate motion, and subject category.
+5. Generation status: Not generated, Draft, Ready for practice, or Completed.
+6. Buttons to generate a topic, open a debate pack, edit a pack, print, and mark a session complete.
+7. A weekly history section.
+8. A progress overview for each learner.
+9. A way to revisit, regenerate, or revise previously generated materials.
+
+The dashboard must be intuitive for a parent who is not a software developer or professional debate coach.
+
+### Module B: Learner profiles
+
+Allow the parent to create, edit, and manage the two profiles.
+
+Each profile must include:
+
+- Learner display name or nickname.
+- Age.
+- Class.
+- Preferred vocabulary level.
+- Preferred speaking duration.
+- Current confidence level.
+- Current speaking and reasoning skill level.
+- Previous topics.
+- Completed sessions.
+- Areas requiring improvement.
+
+Use the supplied ages and classes as initial defaults. Allow the parent to change them later.
+
+Do not require children's full legal names, school names, photographs, contact information, or other unnecessary personal information.
+
+### Module C: Weekly topic generator
+
+Generate one distinct topic for each learner every week.
+
+The parent should be able to:
+
+- Generate the current week's topic.
+- Generate next week's topic in advance.
+- Preview a topic before accepting it.
+- Regenerate a topic that is unsuitable or too difficult.
+- Edit the motion and preparation material.
+- Save an accepted topic.
+- Regenerate a debate pack without silently replacing a previously accepted topic.
+- Generate a topic for a selected category.
+- Request an easier or more challenging version.
+- Mark a topic as completed.
+
+Generate separate topics for the two learners by default. Do not force them to debate the same motion.
+
+Use a weekly topic sequence with a record of past topics. Prevent exact duplicates and avoid excessive repetition of substantially similar topics.
+
+Do not create a new accepted weekly record every time the parent opens the dashboard. Make generation and saving explicit actions.
+
+### Module D: Comprehensive debate pack generator
+
+Every accepted topic must have a complete preparation pack, with sections that the parent can open, edit, print, and save.
+
+#### Section 1: Debate identity
+
+Include:
+
+- Topic title.
+- Formal debate motion, preferably beginning with “This house believes that…” or another appropriate format.
+- Learner name or profile.
+- Age and class.
+- Topic category.
+- Week number or date.
+- Estimated preparation time.
+- Recommended speaking duration.
+- Difficulty level.
+- Learning objectives.
+
+Ensure the motion is specific, debatable, age-appropriate, and capable of supporting reasonable arguments on both sides.
+
+Avoid questions that have only one obvious answer or require children to defend harmful behaviour.
+
+#### Section 2: Understanding the topic
+
+Explain:
+
+- What the motion means in simple language.
+- Definitions of important words.
+- The real-world issue being discussed.
+- Why the issue matters.
+- A familiar example from Nigerian family, school, community, or civic life.
+- Two or three questions to help the learner think independently.
+
+For Primary 4, prioritise concrete examples and simple explanations.
+
+For JSS 1, introduce more nuanced ideas, competing priorities, and the consequences of different choices.
+
+#### Section 3: Background and context
+
+Provide a short, balanced explanation of the issue.
+
+Where relevant, connect the issue to:
+
+- Nigerian schools and communities.
+- Family and community responsibilities.
+- Citizenship and public service.
+- Local government and public institutions.
+- Leadership and accountability.
+- Environmental protection.
+- Technology and responsible digital behaviour.
+- Social cooperation and fairness.
+
+Distinguish facts from opinions, interpretations, and hypothetical examples.
+
+Do not introduce complex political controversy merely to make a topic appear sophisticated.
+
+#### Section 4: Arguments for the motion
+
+Provide at least four distinct arguments for the motion for JSS 1 and three for Primary 4, where the topic reasonably supports that many.
+
+For each argument, include:
+
+1. Argument title.
+2. Main claim.
+3. Explanation of why the claim supports the motion.
+4. A practical example.
+5. Evidence or a source, when a factual claim requires support.
+6. A short sentence the child could use in a speech.
+7. A possible weakness or limitation to help the child think critically.
+
+Use this structure:
+
+**Point → Reason → Example or Evidence → Link to the Motion.**
+
+Explain this structure to the parent and learner.
+
+Do not manufacture weak arguments simply to reach a numerical target. If a motion cannot support the requested number of meaningful arguments, improve the motion.
+
+#### Section 5: Arguments against the motion
+
+Provide the same depth and structure for the opposing side.
+
+The arguments must be genuinely defensible, not caricatures designed to make one side look foolish.
+
+For each argument, provide a claim, explanation, example, relevant evidence where appropriate, a speech-ready sentence, and any important limitation.
+
+The purpose is to teach children to understand opposing viewpoints, not simply to memorise a preferred position.
+
+#### Section 6: Evidence and research
+
+Where research is useful, provide:
+
+- Relevant facts.
+- Short explanations of important findings.
+- Examples from Nigeria.
+- Relevant African or international comparisons when useful.
+- Source title and organisation.
+- Direct source URL.
+- Publication date when available.
+- Date accessed when applicable.
+- A note explaining which argument the source supports.
+- A short, child-friendly explanation of the source.
+
+Prioritise reliable sources, such as Nigerian government agencies, relevant public institutions, recognised educational organisations, universities, established research bodies, and reputable international organisations.
+
+Use sources appropriate to the subject. For example, consult relevant education authorities for education policy and official statistics agencies for statistical claims.
+
+If the app has access to web search or a grounded research capability, use it to retrieve and verify relevant sources.
+
+If live research is unavailable, clearly distinguish general knowledge from verified research. Never invent citations, statistics, quotations, research papers, or URLs.
+
+Provide a research status indicator:
+
+- Sources verified.
+- Partially verified.
+- Research not performed.
+
+Do not describe a source as verified merely because Gemini generated a plausible title or URL.
+
+For the Primary 4 learner, explain research findings in simple language without distorting their meaning.
+
+For the JSS 1 learner, include more detail about the significance and limitations of the evidence.
+
+#### Section 7: Full sample speech for the proposition
+
+Generate a complete model speech supporting the motion.
+
+Include:
+
+1. A respectful greeting and introduction.
+2. A clear statement of the motion.
+3. The speaker's position.
+4. A brief explanation of the key terms, if needed.
+5. The main arguments in a logical order.
+6. Reasons and relevant examples.
+7. Evidence where appropriate.
+8. A response to one likely opposing argument.
+9. A strong conclusion.
+
+Make the speech sound natural when spoken aloud by a child.
+
+For Primary 4, use simple words, short sentences, and a manageable number of points.
+
+For JSS 1, use more developed reasoning, clearer transitions, and stronger evidence.
+
+Do not use adult political rhetoric, unnecessarily sophisticated vocabulary, or artificial phrases that a child would struggle to say naturally.
+
+#### Section 8: Full sample speech for the opposition
+
+Generate a complete model speech opposing the motion.
+
+Use the same structure and comparable effort as the proposition speech.
+
+Ensure that the opposition speech presents a reasonable, coherent case rather than merely responding to the proposition.
+
+Both sample speeches must be complete, usable examples of how a child could structure a debate contribution.
+
+#### Section 9: Rebuttal generator
+
+Generate at least three likely arguments from the opposing side and possible rebuttals for each side, where the topic supports them.
+
+Each rebuttal should contain:
+
+- The opposing claim.
+- Why someone might believe it.
+- A respectful response.
+- A reason or example supporting the response.
+- A short, natural rebuttal sentence the child can say aloud.
+- A reminder to address the argument rather than attack the speaker.
+
+Teach useful phrases, including:
+
+- “I understand that point, but…”
+- “Another way to look at this is…”
+- “The example supports my argument because…”
+- “My opponent has raised an important concern. However…”
+- “Even though that may be true in some situations…”
+
+For the younger child, use fewer, simpler rebuttals. For the older child, introduce more complex reasoning and the ability to acknowledge a valid opposing point.
+
+Do not invent certainty where the evidence is inconclusive.
+
+#### Section 10: Complete debate structure
+
+Provide an age-appropriate debate plan.
+
+For JSS 1, use this suggested sequence:
+
+1. Chairperson's introduction, if applicable.
+2. Proposition opening speech.
+3. Opposition opening speech.
+4. Proposition supporting arguments.
+5. Opposition supporting arguments.
+6. Rebuttals and responses.
+7. Closing statements.
+8. Parent or coach feedback.
+
+For Primary 4, use a shorter sequence:
+
+1. Introduce the motion.
+2. State an opinion.
+3. Give two or three reasons.
+4. Provide an example.
+5. Listen to the other side.
+6. Respond respectfully.
+7. Finish with a clear conclusion.
+
+Allow the parent to adjust the order and timing.
+
+The app must distinguish between a full formal debate and a simplified home practice session.
+
+#### Section 11: Independent-thinking exercises
+
+Include activities that prevent overdependence on the sample speeches.
+
+Provide:
+
+- Three questions the child should answer in their own words.
+- A “build your own argument” worksheet.
+- A prompt to choose the strongest argument and explain why.
+- A prompt to identify a weakness in their preferred side.
+- A short exercise to explain the opposing view fairly.
+- An exercise to produce one original example.
+- A reminder that the child may disagree with the model speech if they can give a reasonable explanation.
+
+Include a fill-in template:
+
+“My opinion is ______.
+
+I believe this because ______.
+
+One example is ______.
+
+Someone may disagree because ______.
+
+My response is ______.
+
+Therefore, I conclude that ______.”
+
+Adapt the template to the learner's age.
+
+#### Section 12: Parent's coaching guide
+
+Every debate pack must include a practical coaching guide for a parent who may have no formal debating experience.
+
+Provide:
+
+- A recommended preparation plan.
+- Suggested time allocations.
+- A simple explanation of the motion.
+- Questions the parent can ask.
+- Questions that encourage the child to think rather than repeat.
+- Ways to help when the child gets stuck.
+- Suggestions for correcting factual mistakes gently.
+- How to encourage respectful disagreement.
+- How to give feedback without discouraging the child.
+- A short debrief after the debate.
+
+Include prompts such as:
+
+- “What is your strongest reason?”
+- “Can you give me an example?”
+- “What might someone on the other side say?”
+- “How could you answer that respectfully?”
+- “Can you explain your point in a different way?”
+
+Do not require the parent to teach every section. Clearly identify the essential sections and the optional advanced material.
+
+#### Section 13: Confidence-building activities
+
+Include one short, practical exercise for the learner before the debate.
+
+Rotate activities such as:
+
+- Speaking for 30 seconds about a familiar object.
+- Explaining an opinion in three sentences.
+- Reading a paragraph aloud clearly.
+- Practising a respectful disagreement.
+- Giving a one-minute explanation without reading.
+- Speaking to a small, supportive audience.
+- Pausing, breathing, and restarting after making a mistake.
+
+Teach practical speaking habits:
+
+- Stand or sit comfortably.
+- Speak clearly and audibly.
+- Look at the audience naturally.
+- Pause between ideas.
+- Avoid rushing.
+- Use notes as reminders rather than reading every word.
+- Accept mistakes as part of learning.
+
+Do not shame, compare, or pressure the children. Confidence should grow through achievable practice and constructive encouragement.
+
+#### Section 14: Weekly assessment rubric
+
+Create a simple, reusable rubric scored from 1 to 4:
+
+1 = Beginning  
+2 = Developing  
+3 = Good progress  
+4 = Strong performance for the learner's current level
+
+Assess:
+
+- Clarity of speech.
+- Confidence and willingness to participate.
+- Logical reasoning.
+- Use of examples and evidence.
+- Organisation of ideas.
+- Listening and rebuttal.
+- Respectful communication.
+- Independence from the sample speech.
+
+Provide an explanation for each score and age-appropriate expectations.
+
+Do not expect the Primary 4 learner to demonstrate the same complexity as the JSS 1 learner.
+
+Include fields for:
+
+- Date.
+- Topic.
+- Scores.
+- What the child did well.
+- One improvement target.
+- Parent's comments.
+- Child's reflection.
+- Next week's practice goal.
+
+Treat scores as coaching feedback, not a school examination or a measure of the child's worth.
+
+## 5. TOPIC CURRICULUM AND PROGRESSION
+
+Develop a curriculum framework that can support a full school year of weekly debates.
+
+Use these topic categories:
+
+1. Honesty, integrity, and moral responsibility.
+2. Family, friendship, and personal responsibility.
+3. School rules, discipline, and learning.
+4. Leadership and good governance.
+5. Citizenship, community service, and public responsibility.
+6. Fairness, justice, equality, and inclusion.
+7. Environmental protection and public cleanliness.
+8. Technology, artificial intelligence, and responsible digital behaviour.
+9. Teamwork, competition, and cooperation.
+10. Money, needs, wants, saving, and responsible choices.
+11. Health, safety, and everyday decision-making.
+12. Nigerian culture, community development, and national responsibility.
+
+Use these categories as a framework rather than a rigid sequence.
+
+Develop a progressive pathway:
+
+**Stage 1 — Expressing an opinion**
+
+Recognising an issue, stating a position, and giving a simple reason.
+
+**Stage 2 — Supporting an argument**
+
+Connecting claims to reasons and examples.
+
+**Stage 3 — Understanding opposing views**
+
+Listening carefully, identifying a different viewpoint, and responding respectfully.
+
+**Stage 4 — Building stronger arguments**
+
+Comparing reasons, evaluating evidence, identifying weaknesses, and responding to counterarguments.
+
+**Stage 5 — Independent debate**
+
+Constructing original speeches, adapting arguments, and reflecting on performance.
+
+Adjust progression according to the learner's class, age, performance, and confidence.
+
+Do not assume that completing a week automatically demonstrates mastery.
+
+When selecting topics, favour motions that are meaningful, specific, accessible, and suitable for both sides.
+
+Illustrative topic ideas include:
+
+- Schools should reward honesty more than high examination scores.
+- Every child should participate in a community service activity.
+- Students should have a say in some school rules.
+- Protecting the environment is everyone's responsibility.
+- Children should have a daily limit on recreational screen time.
+- Public money should be spent first on essential community services.
+- Teamwork is more valuable than individual achievement.
+- School uniforms should be compulsory.
+- Practical skills should receive more attention in school.
+- Good leadership is more important than popularity.
+
+These are examples, not a fixed list. Generate suitable motions for each learner and avoid repeating them unnecessarily.
+
+For governance topics, distinguish between discussing public institutions, policies, accountability, and citizenship and promoting a political party or candidate.
+
+Do not require either child to defend a particular party, ideology, religion, or identity.
+
+## 6. AGE APPROPRIATENESS AND CONTENT SAFEGUARDS
+
+The application is intended for children aged 8 and 10.
+
+Apply these rules to every generated topic and every section of a debate pack:
+
+- Use age-appropriate vocabulary, examples, and complexity.
+- Avoid graphic violence, sexual content, dangerous instructions, and disturbing material.
+- Avoid topics that invite children to demean or target identifiable groups.
+- Avoid partisan persuasion and political campaigning.
+- Treat religion, culture, ethnicity, disability, gender, and other personal characteristics respectfully.
+- Discuss morality through reasoning, empathy, consequences, honesty, responsibility, fairness, and respect rather than humiliation or fear.
+- Do not present stereotypes as facts.
+- Do not encourage bullying, discrimination, harassment, or personal attacks.
+- Avoid forcing a child to argue that they or their family are inferior or morally defective.
+- When discussing sensitive civic issues, use neutral framing and age-appropriate examples.
+- Do not collect unnecessary personal information from children.
+- Keep the parent in control of topic approval and access to generated material.
+
+Debate is about examining ideas, not attacking people.
+
+If a requested topic is unsuitable, explain briefly why and offer a safer alternative.
+
+## 7. GEMINI GENERATION ENGINE
+
+Implement a reusable, structured generation system rather than scattering unrelated prompts throughout the application.
+
+Create reusable prompt templates for:
+
+1. Topic generation.
+2. Topic suitability assessment.
+3. Debate-pack generation.
+4. Rebuttal generation.
+5. Evidence and research assistance.
+6. Difficulty adjustment.
+7. Feedback and assessment.
+8. Weekly curriculum planning.
+
+Pass the learner's profile, topic category, learning stage, preferred duration, previous topics, and relevant preferences to the generation engine.
+
+Use structured JSON responses or an equivalent validated schema for generated content wherever supported.
+
+Define a schema with fields for:
+
+- Topic metadata.
+- Learning objectives.
+- Definitions and background.
+- Proposition arguments.
+- Opposition arguments.
+- Evidence and sources.
+- Proposition speech.
+- Opposition speech.
+- Rebuttals.
+- Debate sequence.
+- Independent-thinking exercises.
+- Parent coaching guide.
+- Confidence activity.
+- Assessment rubric.
+- Research status.
+- Content suitability status.
+
+Validate AI output before saving it. Handle malformed JSON, missing sections, API errors, quota limits, and failed generations gracefully.
+
+If a generation fails, display a helpful message and allow a retry. Do not save an incomplete pack as complete.
+
+Use clear loading and progress states. Avoid duplicate generation requests from repeated clicks.
+
+Store prompts in maintainable, reusable modules or configuration files.
+
+## 8. TECHNICAL ARCHITECTURE
+
+Inspect the capabilities of the current Google AI Studio app-building environment and implement a suitable, maintainable architecture.
+
+Prefer a modern responsive web application with a component-based frontend and a secure server-side integration for Gemini.
+
+Use the supported language, framework, and libraries that work in the generated project. Do not introduce unnecessary infrastructure.
+
+Requirements:
+
+### Frontend
+
+- Responsive design for desktop, tablet, and mobile.
+- Clear navigation and accessible controls.
+- Parent dashboard.
+- Learner profile management.
+- Topic and debate-pack views.
+- Editable content sections.
+- History and progress views.
+- Print-friendly layouts.
+- Useful empty, loading, success, and error states.
+
+### Backend and AI integration
+
+- Use the supported Gemini API integration.
+- Keep private API credentials on the server or in the platform's supported secret configuration.
+- Never expose private API keys in frontend code, client-visible configuration, source control, or generated debate packs.
+- Use the currently supported Google AI Studio integration and current model/API configuration rather than guessing model identifiers or relying on deprecated methods.
+- Handle rate limits, timeouts, malformed responses, and temporary service failures.
+- Validate inputs and generated outputs.
+
+If the application requires a Gemini API key, explain where it should be configured. Never ask me to paste a private key into a public source file.
+
+### Persistence
+
+Debate packs, profiles, history, and progress must persist beyond a browser refresh.
+
+First inspect which persistence services are supported in the generated environment.
+
+Use a supported persistent database or backend if available and appropriate.
+
+If no external database is configured, implement the strongest practical local persistence available and clearly identify its limitations. Do not describe browser-only storage as cloud storage or as a backup.
+
+Make it possible to export important data and generated debate packs.
+
+Do not silently lose previously accepted topics when a new topic is generated.
+
+### Research
+
+If web search is supported, implement source retrieval and verification through the available, appropriate integration.
+
+If live research is unavailable, allow the app to generate useful general-knowledge materials while marking research as unverified or not performed.
+
+Keep source metadata separate from AI-generated explanations.
+
+### Printing and export
+
+Provide a clean print layout for each complete debate pack.
+
+Include:
+
+- Learner and topic details.
+- Debate motion.
+- Both sides' arguments.
+- Both sample speeches.
+- Rebuttals.
+- Practice worksheet.
+- Parent's coaching guide.
+- Assessment sheet.
+- Research sources and URLs, when available.
+
+Use browser printing or another reliable supported export mechanism. If PDF download is implemented, test that it works and that long content is not silently truncated.
+
+## 9. USER EXPERIENCE AND DESIGN
+
+Create a warm, professional, child-friendly educational interface.
+
+The design should be engaging without looking childish or distracting.
+
+Use:
+
+- Clear typography.
+- Generous spacing.
+- Readable headings.
+- Distinct cards for the two learners.
+- Consistent icons and button styles.
+- Simple status indicators.
+- A clear visual distinction between proposition and opposition.
+- Accessible colour contrast.
+- A print stylesheet that removes unnecessary interface elements.
+
+Suggested main navigation:
+
+1. Dashboard.
+2. Learners.
+3. Weekly Debates.
+4. Topic Library.
+5. Progress.
+6. Settings.
+
+A topic card should show the motion, learner, week, category, status, and primary actions.
+
+Inside the debate pack, use clearly labelled sections or tabs. Allow the parent to expand individual sections and jump to the full speeches, rebuttals, or coaching guide.
+
+Avoid placing the entire debate pack in one long, difficult-to-navigate screen.
+
+Use confirmation before deleting a saved topic or permanently replacing edited content.
+
+## 10. DATA MODEL
+
+Implement a clear data model appropriate to the chosen persistence solution.
+
+At minimum, represent:
+
+**Learner**
+- Unique ID.
+- Display name.
+- Age.
+- Class.
+- Current learning stage.
+- Confidence level.
+- Speaking preferences.
+- Creation and update timestamps.
+
+**Debate topic**
+- Unique ID.
+- Learner ID.
+- Motion.
+- Title.
+- Category.
+- Difficulty.
+- Week identifier.
+- Generation date.
+- Approval status.
+- Completion status.
+
+**Debate pack**
+- Unique ID.
+- Topic ID.
+- Definitions and background.
+- Proposition arguments.
+- Opposition arguments.
+- Research sources.
+- Both speeches.
+- Rebuttals.
+- Debate structure.
+- Practice exercises.
+- Coaching guide.
+- Confidence activity.
+- Rubric.
+- Research status.
+- Content version.
+- Creation and update timestamps.
+
+**Assessment**
+- Unique ID.
+- Learner ID.
+- Topic ID.
+- Assessment date.
+- Rubric scores.
+- Strengths.
+- Improvement target.
+- Child reflection.
+- Parent feedback.
+- Next practice goal.
+
+**Curriculum history**
+- Topic IDs already used.
+- Categories covered.
+- Skills practised.
+- Topics skipped or rejected.
+- Upcoming curriculum intentions.
+
+Maintain referential integrity between learners, topics, packs, and assessments.
+
+Support editing and versioning so that regenerating content does not unintentionally erase the parent's approved work.
+
+Use a stable definition of a week, with a configurable preferred debate day and appropriate handling of calendar boundaries.
+
+## 11. QUALITY CONTROL
+
+Before a generated pack can be marked Ready for Practice, check that it contains:
+
+- A clear and age-appropriate motion.
+- A reasonable balance between the two sides.
+- The required number of meaningful arguments, where possible.
+- Explanations and examples for the arguments.
+- Both complete sample speeches.
+- Relevant rebuttals.
+- A usable debate sequence.
+- Independent-thinking exercises.
+- A practical coaching guide.
+- A confidence-building activity.
+- An assessment rubric.
+- Honest research-status information.
+- Appropriate safety screening.
+
+Flag any section that fails validation.
+
+Distinguish between structural checks, content-suitability checks, and actual factual verification. Passing a structural check does not prove that every factual claim is true.
+
+Where a topic requires factual research and no reliable sources are available, indicate that the parent should review the claims before the session.
+
+## 12. TESTING REQUIREMENTS
+
+Implement and run the checks supported by the environment.
+
+At minimum, test the following scenarios:
+
+1. The parent can create and edit both learner profiles.
+2. A JSS 1 topic is generated with suitable complexity.
+3. A Primary 4 topic is generated with suitable complexity.
+4. The two learners receive distinct topics by default.
+5. Each pack contains both sides of the debate.
+6. Both complete sample speeches are present.
+7. Rebuttals address actual opposing arguments.
+8. Research claims are labelled honestly.
+9. An accepted topic remains saved after refresh.
+10. A new generation does not silently overwrite an accepted pack.
+11. Previous topics are available in history.
+12. Completed sessions can be assessed and revisited.
+13. The rubric stores and displays feedback correctly.
+14. Printing preserves the complete debate pack.
+15. Missing API credentials produce a useful error.
+16. Failed or malformed AI responses are handled safely.
+17. Mobile and desktop layouts remain usable.
+18. Unsuitable content is rejected or flagged.
+19. Private credentials are not exposed in frontend code.
+20. Long generated speeches and debate packs are not silently truncated.
+
+Fix defects revealed by the checks. Do not claim that tests passed unless they were actually run.
+
+If a test cannot be run because the environment lacks the required service, browser, credential, or dependency, identify the limitation and provide a practical verification step.
+
+## 13. ACCEPTANCE CRITERIA
+
+The application is not complete merely because it builds or displays a dashboard.
+
+It is complete when the following conditions are satisfied, to the extent supported by the configured environment:
+
+**Generation:** The parent can generate separate weekly debate packs for both children.
+
+**Educational quality:** Each pack has a suitable motion, balanced arguments, both complete sample speeches, rebuttals, examples, and practice exercises.
+
+**Coaching:** The parent receives actionable guidance and confidence-building activities.
+
+**Research integrity:** Sources are presented honestly, and unverified claims are not misrepresented as established facts.
+
+**Persistence:** Accepted topics, generated packs, and assessment records survive the intended persistence boundary.
+
+**History:** Previous topics can be retrieved, reviewed, and used to avoid repetition.
+
+**Progress:** The parent can assess performance and set a realistic next goal.
+
+**Printing:** The full preparation pack can be printed without losing essential content.
+
+**Security:** API credentials remain private and unnecessary child data is not collected.
+
+**Reliability:** Failures are handled gracefully, and previously saved work is protected from accidental loss.
+
+**Usability:** A parent can move from opening the app to preparing a complete debate session without needing to modify the code.
+
+## 14. IMPLEMENTATION WORKFLOW
+
+Follow this sequence:
+
+### Phase 1: Inspect and plan
+
+Inspect the available application-building environment, project files, supported integrations, and current Gemini API configuration.
+
+Make an implementation plan based on the actual environment.
+
+Identify any essential external services and avoid adding paid services unless necessary. Prefer free or already available options.
+
+### Phase 2: Build the application
+
+Implement the interface, learner profiles, topic generator, structured debate-pack generation, research handling, history, progress tracking, persistence, and printing.
+
+Do not stop after creating the visual shell.
+
+### Phase 3: Validate generation quality
+
+Generate sample packs for both learner profiles.
+
+Review them against the requirements in this prompt. Correct deficiencies in the generation templates, output schemas, validation rules, or user interface.
+
+### Phase 4: Test the application
+
+Run available build checks and tests.
+
+Test the primary workflows, persistence, failure handling, print output, and age-appropriate content.
+
+Fix identified issues.
+
+### Phase 5: Report readiness
+
+At the end, provide a concise implementation report covering:
+
+1. What was built.
+2. Which features are functional.
+3. The chosen frontend, backend, and storage architecture.
+4. Which integrations or credentials still need configuration.
+5. Which tests were actually run and their results.
+6. Any known limitations or unresolved defects.
+7. The exact steps I should follow to test the app manually.
+8. The steps required to deploy it, if deployment is not completed in the current environment.
+
+Do not claim that the application is deployed, connected to a database, backed up, or fully tested unless that has actually been verified.
+
+## 15. FINAL INSTRUCTION
+
+Build the application now.
+
+Use your best judgement to resolve routine design and implementation decisions. Prioritise educational quality, reliable generation, security, persistence, and ease of use over unnecessary complexity.
+
+The finished product must help me answer three practical questions every week:
+
+1. **What should each child debate?**
+2. **How can I prepare them with complete, balanced, age-appropriate debate materials?**
+3. **How can I help them become more confident, articulate, thoughtful, and independent over time?**
+
+Generate the application, not another prompt or a written proposal. If an essential capability is unavailable in the current environment, implement the best viable alternative, document the limitation, and continue with the remaining work.
